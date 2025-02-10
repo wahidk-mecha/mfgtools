@@ -25,11 +25,13 @@
       packages = with pkgs; [
         cargo
         rustc
+        cmake
       ];
     in 
     {
       devShell = pkgs.mkShell {
         nativeBuildInputs = libraries;
+        buildInputs = packages;
 
         LIBCLANG_PATH = "${pkgs.llvmPackages.libclang.lib}/lib";
         LIBUSB_HEADERS = "${pkgs.libusb1.dev}/include";

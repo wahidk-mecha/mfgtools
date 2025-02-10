@@ -5,8 +5,8 @@ use std::path::PathBuf;
 
 fn main() {
     println!("cargo:rustc-link-search=../build/libuuu/");
-    println!("cargo:rustc-link-search=/lib/aarch64-linux-gnu/");
-    println!("cargo:rustc-link-search=/usr/lib/aarch64-linux-gnu/");
+    //println!("cargo:rustc-link-search=/lib/aarch64-linux-gnu/");
+    //println!("cargo:rustc-link-search=/usr/lib/aarch64-linux-gnu/");
 
     println!("cargo:rustc-link-lib=dylib=stdc++");
     println!("cargo:rustc-link-lib=dylib=usb-1.0");
